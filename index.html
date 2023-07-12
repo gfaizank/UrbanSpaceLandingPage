@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Space - The best Appliance Repair Company in the town</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="timer.js"></script>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
+</head>
+
+<body  class='overflow-x-hidden'>
+    <div class="container mx-auto">
+        <header>
+            <nav class="flex justify-between">
+                <div class="logo font-bold flex items-center text-blue">Urban Space</div>
+                <ul class="navbar flex items-center">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><button class="btn" onclick="openForm()">Enquire Now</button></li>
+                </ul>
+
+                <!--enquiry form-->
+                <div class="form-popup" id="myForm">
+                  <form class="form-container">
+                    <h1>Drop Your query</h1>
+                    <br>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                
+                    <label for="psw"><b>Tell us your concern</b></label>
+                    <input type="password" placeholder="Enter query" name="psw" required>
+                
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+                <script>
+                  function openForm() {
+                    document.getElementById("myForm").style.display = "block";
+                  }
+                
+                  function closeForm() {
+                    document.getElementById("myForm").style.display = "none";
+                  }
+                </script>
+                <!--form ends-->
+            </nav>
+            <hr>
+        </header>
+
+        <main id="home" class="min-h-screen">
+            <section class="section1">
+                <div class="flex">
+                    <div class="topleft flex flex-col justify-center px-2">
+                        <div class=" text-center">
+                            <img class="dumbellimg" src="appliances.png" alt="">
+                        </div>
+                        <h1 id="about" class="my-1 text-center">The best Appliance Repair Company in the town is here</h1>
+                        <p class=" text-center">What makes us best in the business? Urban Space offers reliable and a wide range of services for all your appliances at the most affordable prices across the market. </p>
+                            <!-- Display the countdown timer in an element -->
+                            <p class="deal text-center">The complete website will be live in <span id="demo"></span></p>
+                            <div class="buttons">
+                                <button class="btn">Enquire Now</button>
+                                <button class="btn"><a href="#contact" class="btn-link">Contact us</a></button>
+                            </div>
+                    </div>
+                    <div class="topright flex justify-center">
+                        <img class="gymimg" src="handyman.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id="services" class="section2">
+                <h1 class="text-center my-2">Pricing</h1>
+                <p class="my-2">We believe in providing affordable repair and service options for all your appliances. Our introductory pricing plans are designed to suit your needs and budget, offering flexible membership options starting from just ₹499. Take a look at the table below to compare our plans and find the perfect fit for your service needs.</p>
+                <div class="boxes flex justify-center">
+                    <div class="box">
+                        <h2>AC Care Pack</h2>
+                        <ul>
+                            <li class="highlighted">₹499</li>
+                            <li>1 AC included</li>
+                            <li>Convenient Washing</li>
+                            <li>On time Customer support</li>
+                            <li>Guaranteed service within 24 hours of booking</li>
+                            <li><button class="btn">Book Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>BeatTheHeat Pack</h2>
+                        <ul>
+                            <li class="highlighted">₹1999</li>
+                            <li>1 AC and Refrigerator included</li>
+                            <li>Gas Filling included</li>
+                            <li>On time Customer support</li>
+                            <li>Guaranteed service within 24 hours of booking</li>
+                            <li><button class="btn">Book Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>AWR Pack</h2>
+                        <ul>
+                            <li class="highlighted">₹2799</li>
+                            <li>1 AC, Washing Machine and Refrigerator included</li>
+                            <li>Gas Filling included</li>
+                            <li>On time Customer support</li>
+                            <li>Guaranteed service within 24 hours of booking</li>
+                            <li><button class="btn">Book Now</button></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+            <section class="section3">
+                <h1 class="text-center my-2">Compare Plans</h1>
+                <div class="container plantable">
+                    <table class="table text-center">
+                      <thead>
+                        <tr>
+                          <th></th><th>AC Care Pack</th>
+                          <th>BeatTheHeat Pack</th>
+                          <th>AWR Pack</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-start">AC service</th>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Refrigerator service</th>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                      </tbody>
+              
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-start">Washing Machine service</th>
+                          <td>-</svg></td>
+                          <td>-</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Complementary Gas Filling</th>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">On Call Support</th>
+                          <td>Yes</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">24 hours fulfillment Guaranteed</th>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</svg></td>
+                        </tr>
+                      </tbody>
+                    </table>
+            </section>
+            <hr>
+            <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3><i class="fas fa-envelope email-icon" style="color: rgb(227 74 56); font-size: 10; margin-right: 5px;"></i> Email</h3>
+                    <p>urbanspacek@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fas fa-phone" style="color: rgb(227 74 56); font-size: 10; margin-right: 5px;"></i> Phone</h3>
+                    <p>+91 81699 43661</p>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt location-icon" style="color: rgb(227 74 56); font-size: 10; margin-right: 5px;"></i> Location</h3>
+                    <p>Plot no 57, Twins Tower, 24, Sector 20, Kharghar, Navi Mumbai, Maharashtra 410210</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+            
+        </main>
+        <footer>
+            Copyright &copy; UrbanSpace.com | All rights reserved
+        </footer>
+
+    </div>
+</body>
+
+</html>
