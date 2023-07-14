@@ -74,3 +74,38 @@
 .text-center{
     text-align: center;
 }
+
+
+/*chatgpt version*/ 
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Apply appropriate styles for utils.css here */
+    .min-h-screen {
+      min-height: auto; /* Remove min-height for smaller screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  /* For screens between 601px and 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    /* Apply appropriate styles for utils.css here */
+    .min-h-screen {
+      min-height: 50vh; /* Adjust min-height for medium-sized screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  /* For screens larger than 1024px */
+  @media (min-width: 1025px) {
+    /* Apply appropriate styles for utils.css here */
+    .min-h-screen {
+      min-height: 100vh; /* Adjust min-height for larger screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+  
+
+  
