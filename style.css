@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+.logo{
+    margin-right: 5px;
+}
+
 .container{
     max-width: 80vw;
     font-family: 'Ubuntu', sans-serif;
@@ -211,7 +215,7 @@ section#contact {
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: #008cbb;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -223,10 +227,57 @@ section#contact {
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: rgb(227 74 56);
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+
+/*chatgpt version*/
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Apply appropriate styles for style.css here */
+    .container {
+      max-width: 90vw; /* Adjust container width for smaller screens */
+    }
+  
+    .topleft, .topright {
+      width: 100%; /* Make the sections full width on smaller screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  /* For screens between 601px and 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    /* Apply appropriate styles for style.css here */
+    .container {
+      max-width: 70vw; /* Adjust container width for medium-sized screens */
+    }
+  
+    .topleft, .topright {
+      width: 50%; /* Divide the sections into two columns on medium-sized screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  /* For screens larger than 1024px */
+  @media (min-width: 1025px) {
+    /* Apply appropriate styles for style.css here */
+    .container {
+      max-width: 80vw; /* Adjust container width for larger screens */
+    }
+  
+    .topleft, .topright {
+      width: 50%; /* Divide the sections into two columns on larger screens */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+  
+  
+  

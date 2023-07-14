@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Urban Space - The best Appliance Repair Company in the town</title>
     <link rel="stylesheet" href="style.css">
     <script src="timer.js"></script>
@@ -18,7 +19,7 @@
     <div class="container mx-auto">
         <header>
             <nav class="flex justify-between">
-                <div class="logo font-bold flex items-center text-blue">Urban Space</div>
+                <div class="logo font-bold flex items-center text-blue"><img class="logo" src="logo.png" alt="" >Urban Space</div>
                 <ul class="navbar flex items-center">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -29,19 +30,44 @@
 
                 <!--enquiry form-->
                 <div class="form-popup" id="myForm">
-                  <form class="form-container">
-                    <h1>Drop Your query</h1>
+                  <form class="form-container" onsubmit="sendEmail(); reset(); return false;">
+                    <h1>Get in Touch</h1>
                     <br>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter your Name" id="name" name="name" required>
+
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+                    <label for="phone"><b>Phone no.</b></label>
+                    <input type="text" placeholder="Enter your number" id="phone" name="phone" required>
                 
-                    <label for="psw"><b>Tell us your concern</b></label>
-                    <input type="password" placeholder="Enter query" name="psw" required>
+                    <label for="msg"><b>Tell us your concern</b></label>
+                    <input type="text" placeholder="message" id="msg" name="msg" required>
                 
                     <button type="submit" class="btn">Submit</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                   </form>
                 </div>
+                <script src="https://smtpjs.com/v3/smtp.js"></script>
+                <script>
+                  function sendEmail(){
+                    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "faizanordersfromamazon@gmail.com",
+    Password : "786786Fk@",
+    To : 'urbanspacek@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form Enquiry",
+    Body : "Name: "+ document.getElementById("name").value
+    +"<br> Email: "+document.getElementById('email').value
+    +"<br> Phone: "+document.getElementById('phone').value
+    +"<br> Message: "+document.getElementById('msg').value
+}).then(
+  message => alert("We'll get back to you shortly")
+);
+                  }
+                </script>
                 <script>
                   function openForm() {
                     document.getElementById("myForm").style.display = "block";
@@ -68,7 +94,7 @@
                             <!-- Display the countdown timer in an element -->
                             <p class="deal text-center">The complete website will be live in <span id="demo"></span></p>
                             <div class="buttons">
-                                <button class="btn">Enquire Now</button>
+                                <button class="btn" onclick="openForm()">Enquire Now</button>
                                 <button class="btn"><a href="#contact" class="btn-link">Contact us</a></button>
                             </div>
                     </div>
@@ -90,18 +116,18 @@
                             <li>Convenient Washing</li>
                             <li>On time Customer support</li>
                             <li>Guaranteed service within 24 hours of booking</li>
-                            <li><button class="btn">Book Now</button></li>
+                            <li><button class="btn" onclick="openForm()">Book Now</button></li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h2>BeatTheHeat Pack</h2>
+                        <h2>Chill Pack</h2>
                         <ul>
                             <li class="highlighted">₹1999</li>
                             <li>1 AC and Refrigerator included</li>
                             <li>Gas Filling included</li>
                             <li>On time Customer support</li>
                             <li>Guaranteed service within 24 hours of booking</li>
-                            <li><button class="btn">Book Now</button></li>
+                            <li><button class="btn" onclick="openForm()">Book Now</button></li>
                         </ul>
                     </div>
                     <div class="box">
@@ -112,7 +138,7 @@
                             <li>Gas Filling included</li>
                             <li>On time Customer support</li>
                             <li>Guaranteed service within 24 hours of booking</li>
-                            <li><button class="btn">Book Now</button></li>
+                            <li><button class="btn" onclick="openForm()">Book Now</button></li>
                         </ul>
                     </div>
 
@@ -126,7 +152,7 @@
                       <thead>
                         <tr>
                           <th></th><th>AC Care Pack</th>
-                          <th>BeatTheHeat Pack</th>
+                          <th>Chill Pack</th>
                           <th>AWR Pack</th>
                         </tr>
                       </thead>
